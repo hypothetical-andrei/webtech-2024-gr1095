@@ -15,7 +15,7 @@ University.hasMany(Student)
 
 try {
     await sequelize.sync({
-        force: true
+        alter: true
     })
 } catch (error) {
     console.warn(error)
