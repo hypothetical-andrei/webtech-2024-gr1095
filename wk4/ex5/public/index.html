@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = async () => {
+            const catContainer = document.getElementById('cat-container')
+            const catName = document.getElementById('cat-name')
+            const catAge = document.getElementById('cat-age')
+            const addBtn = document.getElementById('add-btn')
+
+            async function loadCats () {
+                const response = await fetch('http://localhost:8080/cats')
+                const cats = await response.json()
+                catContainer.innerHTML = ''
+                for (const cat of cats) {
+                    const catElement = document.createElement('div')
+                    catElement.innerHTML = `
+                        <span>${cat.name}</span>
+                        <span>${cat.age}</span>
+                    `
+                    catContainer.appendChild(catElement)
+                }
+            }
+
+            addBtn.onclick = async () => {
+                const response = await fetch('http://localhost:8080/cats', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: catName.value,
+                        age: catAge.value
+                    })
+                })
+                if (response.ok) {
+                    loadCats()
+                }
+ 
+            }
+
+            loadCats()
+        }
+    </script>
+</head>
+<body>
+    <div id="cat-container"></div>
+    <div id="cat-form">
+        <input type="text" id="cat-name">
+        <input type="text" id="cat-age">
+        <input type="button" value="Add me!" id="add-btn" />
+    </div>
+</body>
+</html>

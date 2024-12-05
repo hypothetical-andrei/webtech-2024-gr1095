@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-form {
+            width: 25vw;
+            height: 40vh;
+            box-sizing: border-box;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        
+        input[type] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <div class="button-bar">
+            <input type="button" value="Login">
+            <input type="button" value="Register">
+        </div>
+    </div>
+</body>
+</html>

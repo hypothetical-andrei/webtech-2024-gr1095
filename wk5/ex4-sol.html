@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tic-tac-toe {
+            height: 600px;
+            width: 600px;
+        }
+        .square {
+            height: 200px;
+            width: 200px;
+            box-sizing: border-box;
+            background-color: lightblue;
+            float: left;
+        }
+        .top.square {
+            border-bottom: 3px solid black;
+        }
+
+        .bottom.square {
+            border-top: 3px solid black;
+        }
+
+        .left.square {
+            border-right: 3px solid black;
+        }
+
+        .right.square {
+            border-left: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="tic-tac-toe">
+        <div class="row">
+            <div class="top left square"></div>
+            <div class="top middle square"></div>
+            <div class="top right square"></div>
+        </div>
+        <div class="row">
+            <div class="center left square"></div>
+            <div class="center middle square"></div>
+            <div class="center right square"></div>
+        </div>
+        <div class="row">
+            <div class="bottom left square"></div>
+            <div class="bottom middle square"></div>
+            <div class="bottom right square"></div>
+        </div>
+    </div>
+</body>
+</html>

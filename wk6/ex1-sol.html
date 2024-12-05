@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #page {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .column {
+            width: 33vw;
+            height: 100vh;
+            background-color: lightblue;
+            box-sizing: border-box;
+            border: 3px dashed black;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div class="column">i am a column</div>
+        <div class="column">i am a column</div>
+        <div class="column">i am a column</div>
+    </div>
+</body>
+</html>

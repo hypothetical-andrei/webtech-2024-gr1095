@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = () => {
+            document.querySelectorAll(('li:nth-child(odd)')).forEach((li) => {
+                li.style.backgroundColor = 'orange';
+            })
+            document.querySelectorAll(('li:nth-child(even)')).forEach((li) => {
+                li.style.backgroundColor = 'green';
+            })
+        }
+    </script>
+    <style>
+        tbody tr:nth-child(odd) {
+            background-color: orange;
+        }
+
+        tbody tr:first-child {
+            background-color: yellow;
+        }
+
+        tbody tr:last-child {
+            background-color: pink;
+        }   
+    </style>
+</head>
+<body>
+    <ul>
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+        <li>fourth</li>
+        <li>fifth</li>
+    </ul>
+
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Job</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Accountant</td>
+            </tr>
+            <tr>
+                <td>Jim</td>
+                <td>HR</td>
+            </tr>
+            <tr>
+                <td>Ann</td>
+                <td>Programmer</td>
+            </tr>
+            <tr>
+                <td>Ann</td>
+                <td>Programmer</td>
+            </tr>
+            <tr>
+                <td>Ann</td>
+                <td>Programmer</td>
+            </tr>
+            <tr>
+                <td>Ann</td>
+                <td>Programmer</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

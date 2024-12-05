@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>psedo meet</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        #page {
+            display: grid;
+            height: 100vh;
+            grid-template-rows: 90vh auto;
+            grid-template-columns: 70vw 15vw auto;
+            grid-template-areas: 
+                "video-display user-display chat-display"
+                "button-bar button-bar button-bar";
+            ;
+        }
+
+        #video-display {
+            background-color: orange;
+            grid-area: video-display;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #user-display {
+            background-color: lightblue;
+            grid-area: user-display;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow-y: auto;
+            gap: 1em;
+            padding-top: 1em;
+        }
+        .user-card {
+            border-radius: 1em;
+            background-color: black;
+            padding: 1em;
+            height: 12vw;
+            width: 12vw;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            .user-avatar {
+                background-color: white;
+                border-radius: 50%;
+                height: 8vw;
+                width: 8vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .user-name {
+                color: white;
+                font-size: 1.5em;
+            }
+        }
+        #chat-display {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            grid-area: chat-display;
+            padding: 0.5em;
+            
+            .message {
+                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                text-align: right;
+                padding: 0.2em;
+
+                .sender {
+                    font-style: italic;
+                    font-size: 0.8em;
+                }
+            }
+        }
+
+        #button-bar {
+            display: flex;
+            justify-content: space-evenly;
+            grid-area: button-bar;
+            background-color: lightgreen;
+            align-items: center;
+
+            .action-button {
+                background-color: lightblue;
+                border-radius: 50%;
+                height: 5vw;
+                width: 5vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div id="video-display">i am a video, believe me</div>
+        <div id="user-display">
+            <div class="user-card">
+                <div class="user-avatar">i am an avatar</div>
+                <div class="user-name">i am a name</div>
+            </div>
+            <div class="user-card">
+                <div class="user-avatar">i am an avatar</div>
+                <div class="user-name">i am a name</div>
+            </div>
+            <div class="user-card">
+                <div class="user-avatar">i am an avatar</div>
+                <div class="user-name">i am a name</div>
+            </div>
+        </div>
+        <div id="chat-display">
+            <div class="message">
+                <div class="sender">Ann</div>
+                <div class="content">some message</div>
+            </div>
+            <div class="message">
+                <div class="sender">Ann</div>
+                <div class="content">some message</div>
+            </div>
+            <div class="message">
+                <div class="sender">Ann</div>
+                <div class="content">some message</div>
+            </div>
+        </div>
+        <div id="button-bar">
+            <div class="action-button">A</div>
+            <div class="action-button">A</div>
+            <div class="action-button">A</div>
+        </div>
+    </div>
+</body>
+</html>

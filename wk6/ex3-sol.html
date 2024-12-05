@@ -1,0 +1,190 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            height: 500px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top, .bottom {
+            height: 50px;
+            width: 500px;
+        }
+
+        .wrapper-inner {
+            display: flex;
+            background-color: orange;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column;
+            height: 400px;
+            width: 500px;
+        }
+
+        .box-inner, .box {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .row:nth-child(odd) .box:nth-child(odd) {
+            background-color: black;
+        }
+
+        .row:nth-child(even) .box:nth-child(even) {
+            background-color: black;
+        }
+
+        .middle .row .box:first-child, .middle .row .box:last-child {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+          <div class="wrapper-inner">
+            <div class="box-inner"></div>
+            <div class="box-inner">A</div>
+            <div class="box-inner">B</div>
+            <div class="box-inner">C</div>
+            <div class="box-inner">D</div>
+            <div class="box-inner">E</div>
+            <div class="box-inner">F</div>
+            <div class="box-inner">G</div>
+            <div class="box-inner">H</div>
+            <div class="box-inner"></div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="row">
+            <div class="box">1</div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">1</div>         
+          </div>
+          <div class="row">
+            <div class="box">2</div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">2</div>         
+          </div>
+          <div class="row">
+            <div class="box">3</div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">3</div>         
+          </div>
+          <div class="row">
+            <div class="box">4</div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">4</div>         
+          </div>
+          <div class="row">
+            <div class="box">5</div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">5</div>         
+          </div>
+          <div class="row">
+            <div class="box">6</div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">6</div>         
+          </div>
+          <div class="row">
+            <div class="box">7</div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">7</div>         
+          </div>
+          <div class="row">
+            <div class="box">8</div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">8</div>         
+          </div>        
+        </div>
+  
+       
+        <div class="bottom">
+          <div class="wrapper-inner">
+            <div class="box-inner"></div>
+            <div class="box-inner">A</div>
+            <div class="box-inner">B</div>
+            <div class="box-inner">C</div>
+            <div class="box-inner">D</div>
+            <div class="box-inner">E</div>
+            <div class="box-inner">F</div>
+            <div class="box-inner">G</div>
+            <div class="box-inner">H</div>
+            <div class="box-inner"></div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
