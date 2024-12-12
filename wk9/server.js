@@ -121,10 +121,11 @@ app.post('/students/:sid/courses', async (req, res, next) => {
 
 app.get('/courses/:cid/students', async (req, res, next) => {
     try {
-        const course = await models.Course.findByPk(req.params.cid)
+        const course = await models.Course.findByPk(req.params.cid, {
+            include: models.Student
+        })
         if (course) {
-            const students = await course.getStudents()
-            res.status(200).json(students)
+            res.status(200).json(course.students)
         } else {
             res.status(404).json({ message: 'not found' })
         }
