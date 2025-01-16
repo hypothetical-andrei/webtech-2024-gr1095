@@ -2,8 +2,6 @@ import express from 'express'
 import models from './models/index.js'
 import cors from 'cors'
 
-import { Op } from 'sequelize'
-
 const app = express()
 app.use(cors())
 app.use(express.json())
@@ -13,35 +11,8 @@ app.use(express.json())
  */
 app.get('/universities', async (req, res, next) => {
     try {
-      const query = {}
-      const countQuery = {}
-      if (req.query.pageSize && req.query.pageNumber) {
-        const pageSize = parseInt(req.query.pageSize)
-        const pageNumber = parseInt(req.query.pageNumber)
-        query.limit = pageSize
-        query.offset = pageSize * pageNumber
-      }
-      if (req.query.sortField && req.query.sortOrder) {
-        query.order = [[req.query.sortField, req.query.sortOrder]]
-      }
-      if (req.query.filterField && req.query.filterContent) {
-        query.where = {
-          [req.query.filterField]: {
-            [Op.like]: `%${req.query.filterContent}%`
-          } 
-        }
-        countQuery.where = {
-          [req.query.filterField]: {
-            [Op.like]: `%${req.query.filterContent}%`
-          } 
-        }
-      }
-      const data = await models.University.findAll(query)
-      const count = await models.University.count(countQuery)
-      res.status(200).json({
-        data,
-        count
-      })
+      const universities = await models.University.findAll()
+      res.status(200).json(universities)
     } catch (err) {
       next(err)
     }
